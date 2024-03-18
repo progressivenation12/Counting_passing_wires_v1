@@ -6,9 +6,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("d:\\КД\\ГАЗ\\025\\FOTON\\A32R32.3724 025-160;-170\\FilesForComparingWireTables\\A32R32.3724025-170 2024.12.03.txt");
-        Scanner scannerFile = new Scanner(file);
         Scanner scannerSystem = new Scanner(System.in);
+        System.out.print("Введите место хранения файла .TXT начиная с корневой папки: ");
+        String path = scannerSystem.nextLine();
+
+        File file = new File(path);
+        Scanner scannerFile = new Scanner(file);
 
         Map<Integer, Wire> wireMap = new HashMap<>();
         List<String> groupNumber = new ArrayList<>();
