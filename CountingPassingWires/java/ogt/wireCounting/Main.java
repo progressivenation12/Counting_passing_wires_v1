@@ -7,7 +7,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scannerSystem = new Scanner(System.in);
-        System.out.print("Введите место хранения файла .TXT начиная с корневой папки: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РјРµСЃС‚Рѕ С…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»Р° .TXT РЅР°С‡РёРЅР°СЏ СЃ РєРѕСЂРЅРµРІРѕР№ РїР°РїРєРё: ");
         String path = scannerSystem.nextLine();
 
         File file = new File(path);
@@ -18,12 +18,12 @@ public class Main {
 
         Wire wire;
 
-        System.out.print("Введите адреса групп через пробел: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ Р°РґСЂРµСЃР° РіСЂСѓРїРї С‡РµСЂРµР· РїСЂРѕР±РµР»: ");
 
         String string = scannerSystem.nextLine();
 
         if (string.isEmpty()) {
-            System.out.println("Адреса групп не введены! ");
+            System.out.println("РђРґСЂРµСЃР° РіСЂСѓРїРї РЅРµ РІРІРµРґРµРЅС‹! ");
             System.exit(0);
         } else {
             groupNumber = List.of(string.split(" "));
@@ -61,7 +61,7 @@ public class Main {
         scannerSystem.close();
         scannerFile.close();
 
-        System.out.println("Количество проводов в жгуте: " + wireMap.size() + " шт.");
-        System.out.println("Количество проводов проходящих через уплотнитель КР: " + counterWires + " шт.");
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРІРѕРґРѕРІ РІ Р¶РіСѓС‚Рµ: " + wireMap.size() + " С€С‚.");
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРІРѕРґРѕРІ РїСЂРѕС…РѕРґСЏС‰РёС… С‡РµСЂРµР· СѓРїР»РѕС‚РЅРёС‚РµР»СЊ РљР : " + counterWires + " С€С‚.");
     }
 }
