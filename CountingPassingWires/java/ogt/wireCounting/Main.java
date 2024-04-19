@@ -1,22 +1,22 @@
 package ogt.wireCounting;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        Scanner scannerSystem = new Scanner(System.in);
-        System.out.print("Введите место хранения файла .TXT начиная с корневой папки: ");
-        String path = scannerSystem.nextLine();
-
-        File file = new File(path);
-        Scanner scannerFile = new Scanner(file);
-
+    public static void main(String[] args) throws IOException {
         Map<Integer, Wire> wireMap = new HashMap<>();
         List<String> groupNumber = new ArrayList<>();
-
         Wire wire;
+
+        Scanner scannerSystem = new Scanner(System.in);
+
+        System.out.print("Введите место хранения файла .TXT начиная с корневой папки: ");
+        String scannerString = scannerSystem.nextLine();
+
+        Path path = Path.of(scannerString);
+        Scanner scannerFile = new Scanner(path);
 
         System.out.print("Введите адреса групп через пробел: ");
 
