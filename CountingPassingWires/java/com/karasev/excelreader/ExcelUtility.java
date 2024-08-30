@@ -109,8 +109,8 @@ public class ExcelUtility {
     }
 
     private static void readExcelSheetAndSaveWireEntityToList(Sheet sheet, List<Wire> wireList) {
-        for (Row currenRow : sheet) {
-            Iterator<Cell> cellsInRow = currenRow.iterator();
+        for (Row currentRow : sheet) {
+            Iterator<Cell> cellsInRow = currentRow.iterator();
             Wire wire = new Wire();
 
             int cellIndex = 0;
