@@ -53,7 +53,7 @@ public class ExcelUtility {
         return file.getName().endsWith(XLSX) || file.getName().endsWith(XLS);
     }
 
-    //Tметод для аналази полученого файла
+    //метод для анализа полученого файла
     private static int[] readFileAndAnalysis(File file, List<String> groupNumber) {
         String extension = FilenameUtils.getExtension(file.getName());
         char groupLetter = groupNumber.get(0).charAt(0);
@@ -91,7 +91,7 @@ public class ExcelUtility {
         return counterWires;
     }
 
-    //метод для подсчта количества проводов в листе и проводов проходящих через чехол КР
+    //метод для подсчета количества проводов в листе и проводов проходящих через чехол КР
     private static int[] getCounterWires(Sheet sheet,
                                          List<String> groupNumber,
                                          char groupLetter,
